@@ -16,6 +16,7 @@ public class Main
     // num = skibidi.nextLine();
     lastFirstN("skibidi", "toilet", 3);
     stringManip("skibidi", "toilet");
+    System.out.println(removeStr("skibidi", "kib"));
   }
 
   /** Precondition: s1 and s2 are not null
@@ -54,7 +55,15 @@ public class Main
   */
   public static String removeStr(String s1, String s2)
   {
-    String output = null;
+    String output;
+    String firstPart;
+    String remains;
+    int index;
+    index = s1.indexOf(s2);
+    int uwu = index + s2.length();
+    firstPart = s1.substring(0, index);
+    remains = s1.substring(uwu);
+    output = firstPart + remains;
     return output;
   }
 }
